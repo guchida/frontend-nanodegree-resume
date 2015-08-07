@@ -1,8 +1,24 @@
-var name = "Greydon Uchida";
-var role = "Software Engineer";
+var bio = {
+    name:"Greydon Uchida",
+    role:"Software Engineer",
+    cell:"(415)555-1234",
+    email:"Email:g@greydon.org",
+    location:"San Francisco Bay Area",
+    pictureURL:"",
+    welcome:"This is my resume.",
+    skills:"Jenkins, unix, mac, python, devops"
+};
 
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedCell = HTMLmobile.replace("%data%", bio.cell);
+var formattedEmail = HTMLemail.replace("%data%", bio.email);
+var formattedLocation = HTMLlocation.replace("%data%", bio.location);
+var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+$("#topContacts").append(formattedCell);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedLocation);
+$("#workExperience").prepend(formattedWelcome);
