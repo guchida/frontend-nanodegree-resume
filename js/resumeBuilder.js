@@ -17,7 +17,7 @@ var work = {
         {
             "position" : "Software Engineer",
             "employer" : "if(we)",
-            "years" : "5",
+            "years" : "2010 - Current",
             "location" : "San Francisco, CA",
             "description" : "This is what if(we) does, etc."
         }
@@ -41,8 +41,12 @@ if (bio.skills.length > 0) {
     });
 }
 
-$("#workExperience").append(HTMLworkStart);
 work.jobs.forEach(function(job) {
-    $("#workExperience").append(HTMLworkEmployer.replace("%data%", job.employer));
-    $("#workExperience").append(HTMLworkTitle.replace("%data%", job.position));
+    $("#workExperience").append(HTMLworkStart);
+    var formattedJob = HTMLworkEmployer.replace("%data%", job.employer);
+    formattedJob += HTMLworkTitle.replace("%data%", job.position);
+    formattedJob += HTMLworkDates.replace("%data%", job.years);
+    formattedJob += HTMLworkLocation.replace("%data%", job.location);
+    formattedJob += HTMLworkDescription.replace("%data%", job.description);
+    $(".work-entry:last").append(formattedJob);
 });
