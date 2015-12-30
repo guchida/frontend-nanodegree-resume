@@ -3,9 +3,10 @@ var bio = {
     "role" : "Software Engineer",
     "contacts" : {
         "mobile" : "(415)555-1234",
-        "email" : "Email:g@greydon.org",
+        "email" : "g@greydon.org",
         "github" : "https://github.com/guchida",
-        "location" : "San Francisco Bay Area"
+        "location" : "San Francisco Bay Area",
+        "twitter" : "iamtheyeti"
     },
     "biopic" : "images/image.png",
     "welcomeMessage" : "This is my resume.",
@@ -16,6 +17,7 @@ var bio = {
         $("#topContacts,#footerContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
         $("#topContacts,#footerContacts").append(HTMLemail.replace("%data%", this.contacts.email));
         $("#topContacts,#footerContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
+        $("#topContacts,#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
         $("#topContacts,#footerContacts").append(HTMLlocation.replace("%data%", this.contacts.location));
         $("#header").append(HTMLbioPic.replace("%data%", this.biopic));
         $("#header").append(HTMLwelcomeMsg.replace("%data%", this.welcomeMessage));
