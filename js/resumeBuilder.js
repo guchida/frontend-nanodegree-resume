@@ -135,25 +135,4 @@ bio.display();
 work.display();
 education.display();
 projects.display();
-
-$(document).click(function(loc) {
-    logClicks(loc.clientX,loc.client);
-});
-
-function locationizer(work_obj) {
-    var locations = [];
-    work_obj.jobs.forEach(function(job) {
-        location.push(jobs.location);
-    })
-};
-
-$("#main").append(internationalizeButton);
-
-function inName(name) {
-    names = name.split(" ");
-    var nameString = names[0].toUpperCase() + given.substring(1).toLowerCase();
-    nameString += ' ' + family.toUpperCase();
-    return nameString;
-};
-
-console.log(inName("gREYDON", "uChIDA"));
+$("#mapDiv").append(googleMap);
