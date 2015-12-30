@@ -47,7 +47,8 @@ var work = {
             formattedJob += HTMLworkLocation.replace("%data%", job.location);
             formattedJob += HTMLworkDescription.replace("%data%", job.description);
             $(".work-entry:last").append(formattedJob);
-        })
+        });
+        $("#mapDiv").append(googleMap);
     }
 };
 
@@ -135,4 +136,3 @@ bio.display();
 work.display();
 education.display();
 projects.display();
-$("#mapDiv").append(googleMap);
