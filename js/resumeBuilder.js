@@ -13,10 +13,10 @@ var bio = {
     "display" : function() {
         $("#header").prepend(HTMLheaderRole.replace("%data%", this.role));
         $("#header").prepend(HTMLheaderName.replace("%data%", this.name));
-        $("#topContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
-        $("#topContacts").append(HTMLemail.replace("%data%", this.contacts.email));
-        $("#topContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
-        $("#topContacts").append(HTMLlocation.replace("%data%", this.contacts.location));
+        $("#topContacts,#footerContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
+        $("#topContacts,#footerContacts").append(HTMLemail.replace("%data%", this.contacts.email));
+        $("#topContacts,#footerContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
+        $("#topContacts,#footerContacts").append(HTMLlocation.replace("%data%", this.contacts.location));
         $("#header").append(HTMLbioPic.replace("%data%", this.biopic));
         $("#header").append(HTMLwelcomeMsg.replace("%data%", this.welcomeMessage));
         if (this.skills.length > 0) {
